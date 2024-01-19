@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [nav,setNav]=useState(false)
     const handleNav=()=>{
@@ -18,7 +19,9 @@ const Navbar = () => {
     <a href='' className='text-[#191919] text-xl font-medium hover:text-orange-500'>Our Menu</a>
     <a href='' className='text-[#191919] text-xl font-medium hover:text-orange-500'>Add Food</a>
     <a href='' className='text-[#191919] text-xl font-medium hover:text-orange-500'>Popular Food</a>
+    <Link to ='/login'>
     <button className='bg-[#ee7810] active:scale-90 transition duration-100 transform hover:shadow-xl rounded-full px-8 py-2 text-xl font-medium text-white'>Login</button>
+    </Link>
     </div>
     <div className='block lg:hidden z-40' onClick={handleNav}>
     {
